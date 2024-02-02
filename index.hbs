@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        .header {
+            text-align: right;
+            color: #000080;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid orange;
+        }
+        .table {
+            position:relative;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            border: orange;
+        }
+        table, th, td {
+            border: 1px solid orange;
+            border-collapse: collapse;
+        }
+        .table th {
+            color: rgb(1, 1, 133);
+            text-align: center;
+            padding: 10px;
+        }
+        .table td {
+            color: rgb(2, 2, 126);
+            text-align: center;
+            padding: 10px;
+        }
+        #background{ background-color: #3c87f8; }
+        
+        .table th, .table td { border: 1px solid orange; /* Aggiunge un bordo alle celle */  }
+
+        .note {
+            font-size: 12px;
+            color: #000080;
+            width: 100%;
+        }
+        .note2{
+            font-size: 16px;
+            color: #000080;
+            width: 100%;
+            text-align: justify;
+        }
+        body { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+        h1, h2, h3 { color: #000080; }
+        
+        .indice { font-size: 20px; }
+
+        .hr{ color: orange; }
+
+        .fullscreen-div { width: 100%; height: 100%; }
+
+    </style>
+</head>
+<body style="margin: 7%;">
+    <div style="page-break-after: always; padding-top: 7%;">        <!--<h1> Qua ci andrà l'header </h1> -->
+        <h1 class="header" style="font-size: 24px; text-style: colibri;">Esiti Go</h1><!-- Cribis Search Approfondito -->
+        <h2 class="header" style="font-size: 18px;">Persona Fisica</h2> <!-- Giuridica Corporate -->
+        <hr style="color: orange; padding-bottom: 3%;">
+        <br>
+
+        <table class="table" style="!important background-color: #000080 !important;">
+            <thead>
+                <tr>
+                    <th>{{bottone}}</th>
+                </tr>
+            </thead>
+        </table>
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226); " ><b>INFORMAZIONE NR.</b></td>
+                    <td>{{informazioneNr}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226); "><b>DATA CLIENTE</b></td>
+                    <td>{{dataCliente}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226); "><b>DATA EVASIONE</b></td>
+                    <td>{{dataEvasione}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226); "><b>CLIENTE</b></td>
+                    <td>{{cliente}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226); "><b>RIFERIMENTO CLIENTE</b></td>
+                    <td>{{riferimentoCliente}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>DATI INPUT</th>
+                </tr>
+            </thead>
+        </table>
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>Nominativo</b></td>
+                    <td>{{bottone}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>CODICE FISCALE</b></td>
+                    <td>{{cf}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>Indirizzo</b></td>
+                    <td>{{indirizzo}}</td>
+                </tr>
+                                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>CAP</b></td>
+                    <td>{{cap}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>Comune</b></td>
+                    <td>{{Comune}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>Provincia</b></td>
+                    <td>{{provincia}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+        <p class="note"> <b> N.B. </b></p>
+        <p class="note" style="text-align:justify "> 
+            Le informazioni ed i dati forniti dalla nostra azienda alla propria clientela, sono raccolti e trattati secondo quanto disposto
+            dal d.Lgs.196 del 2003 e dal nuovo RE 679/2016. I clienti possono quindi utilizzare i dati e le informazioni fornite secondo
+            le modalità previste dalla legge per la tutela dei propri diritti. <br>L'informazione ha natura strettamente riservata, personale e
+            confidenziale, pertanto non può essere divulgata a terzi e tantomeno in sede giudiziara in quanto le informazioni presenti
+            non sono supportate da prove documentali. Ci esimiamo da qualsiasi responsabilità consequenziali, di natura civile, penale
+            derivanti da dette violazioni. E sin da ora escluso qualunque titolo e motivo di azione di rivalsa per le notizie fornite.
+        </p>
+    </div>
+   
+    <div style="page-break-after: always; padding-top: 7%;">
+        <h2>ANAGRAFICA</h2>
+        <hr style="color: orange; padding-bottom: 3%;">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>COGNOME</b></td>
+                    <td>{{cognome}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>NOME</b></td>
+                    <td>{{nome}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>DATA DI NASCITA</b></td>
+                    <td>{{dataNascita}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>LUOGO DI NASCITA</b></td>
+                    <td>{{luogoNascita}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>PROVINCIA DI NASCITA</b></td>
+                    <td>{{provinciaNascita}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>CODICE FISCALE</b></td>
+                    <td>{{cf}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>INDIRIZZO</b></td>
+                    <td>{{indirizzo}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>CAP </b></td>
+                    <td>{{cap}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>COMUNE</b></td>
+                    <td>{{comune}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>PROVINCIA</b></td>
+                    <td>{{provincia}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>NOTE</b></td>
+                    <td>{{note}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="page-break-after: always; padding-top: 7%;">
+        <h2>ATTUALE OCCUPAZIONE LAVORATIVA:</h2>
+        <table class="table">
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">CATEGORIA:</td>
+                <td>{{categoria}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">CONTRATTO:</td>
+                <td>{{contratto}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">ORARIO:</td>
+                <td>{{orario}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">DATA INIZIO:</td>
+                <td>{{dataInizio}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">DATA SCADENZA:</td>
+                <td>{{dataScadenza}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">MENSILE LORDO:</td>
+                <td>{{mensileLordo}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">ANNUO LORDO:</td>
+                <td>{{annuoLordo}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">DATORE DI LAVORO:</td>
+                <td>{{datoreLavoro}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">PARTITA IVA:</td>
+                <td>{{partitaIva}}</td>
+            </tr>
+            <tr style="text-align: center;"></tr>
+            <td colspan="2" style="text-align: center;"> SEDE LEGALE </td>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">INDIRIZZO:</td>
+                <td>{{indirizzo}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">CAP:</td>
+                <td>{{cap}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">COMUNE:</td>
+                <td>{{comune}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">PROVINCIA</td>
+                <td>{{provinciaSede}}</td>
+            </tr>
+            <tr style="text-align: center;"></tr>
+            <td colspan="2" style="text-align: center;"> SEDE OPERATIVA </td>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">INDIRIZZO:</td>
+                <td>{{indirizzo}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">CAP:</td>
+                <td>{{capComune}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">COMUNE:</td>
+                <td>{{capComune}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">PROVINCIA:</td>
+                <td>{{capComune}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">NOTE:</td>
+                <td>{{capComune}}</td>
+            </tr>            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">RECAPITO DATORE DI LAVORO:</td>
+                <td>{{capComune}}</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(169, 194, 226);  ">NOTE DI VERIFICA:</td>
+                <td>{{capComune}}</td>
+            </tr>
+        </table>
+    
+        <p>NOTE: IL RICHIESTO RISULTA ESSERE DISOCCUPATO.</p>
+        <p>NOTE DI VERIFICA</p>
+
+        <footer>
+            <p>www.example.it</p>
+        </footer>
+
+    </div>
+    
+    <div style="page-break-after: always; padding-top: 7%;">
+        <div>
+            <h3>Negatività</h3>
+            <hr style="color: orange; padding-bottom: 3%;"> <br>
+            <table class="table">
+                <tbody>
+                    <tr style="text-align: center;"></tr>
+                    <td colspan="2" style="text-align: center;"> DETTAGLIO NEGATIVITA' UFFICIALI </td>
+                    <tr>
+                        <td style="background-color: rgb(169, 194, 226);  ">PROTESTI:</td>
+                        <td>{{protesti}}</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(169, 194, 226);  ">PREGIUDIZIEVOLI:</td>
+                        <td>{{pregiudizievoli}}</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(169, 194, 226);  ">PROCEDURE CONCORSUALI:</td>
+                        <td>{{procedureConcorsuali}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div>
+            <h3>Protesti</h3>
+            <hr style="color: orange; padding-bottom: 3%;"> <br>
+            <p class="note">
+                text        
+            </p>
+        </div>
+        <br>
+        <div>
+            <h3>Pregiudizievoli</h3>
+            <hr style="color: orange; padding-bottom: 3%;"> <br>
+            <p class="note">
+                Testo da DB        
+            </p>
+        </div>
+        <br>
+        <div>
+            <h3>Procedure Concorsuali</h3>
+            <hr style="color: orange; padding-bottom: 3%;"> <br>
+            <p class="note2">
+                Attraverso la consultazione dell'apposito archivio tenuto dalle Camere di Commercio non sono state rilevate Procedure Concorsuali.      
+            </p>
+            <p style="text-align: justify; color:rgb(1, 1, 99)">
+                <b>Note su eventi negativi: </b><br>
+                Il controllo è stato effettuato sugli eventi associati alla persona o all'impresa richiesta negli ultimi 5 anni
+                <b>Protesti: </b>  alcuni casi potrebbero non essere rilevati i protesti pubblicati in CCIAA privi del codice fiscale
+                <b>Pregiudizievoli: </b>  il controllo pregiudizievoli viene effettuato attraverso la consultazione di banche dati private che vengono aggiornate, per i principali eventi di conservatoria, mediante un circuito nazionale per i beneficiari bancari/finanziari/esattoriali, e mediante una rete di corrispondenti per gli eventivi depositati presso gli uffici Tavolari (province di Trento, Bolzano, Gorizia, Trieste). Gli atti rilevati, tuttavia, non sempre comprendono le annotazioni di cancellazione che possono intervenire a posteriori, solitamente a seguito di estinzione del debito; in aggiunto, possono non essere presenti le annotazioni di event dati. Per avere evidenza certa suggeriamo di richiedere il servizio Visura Ipocatastale sui soggetti interessati.
+                <b>Procedure: </b>  le procedure vengono rilevate solo se esistenti sull'impresa richiesta o nel caso di persona fisica su ditte individual ad essa collegate.
+
+            </p>
+        </div>
+    </div>
+    
+    <div style="page-break-after:always;">
+        <h2>CARICHE ATTUALI</h2>
+        <hr style="color: orange; padding-bottom: 3%;">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>CARICA</b></td>
+                    <td>{{carica}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>DENOMINAZIONE</b></td>
+                    <td>{{denominazione}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>PARTITA IVA</b></td>
+                    <td>{{partitaIva}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>SEDE LEGALE</b></td>
+                    <td>{{sedeLegale}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>N.REA</b></td>
+                    <td>{{nRea}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>OGGETTO SOCIALE</b></td>
+                    <td>{{oggettoSociale}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>STATO</b></td>
+                    <td>{{stato}}</td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "><b>OPERATIVITA' </b></td>
+                    <td>{{operativita}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div style="page-break-after:always">
+        <h3>IMMOBILI</h3>
+        <hr style="color: orange; padding-bottom: 3%;"> <br>
+        <p class="note">
+            Testo da DB        
+        </p>
+    </div>
+    
+    <div style="page-break-after:always; padding-top: 5%;">
+        <h3>VEICOLI</h3>
+        <hr style="color: orange; padding-bottom: 3%;"> <br>
+        
+        {{#each veicoli as |parte|}}
+        <br /><br/>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Autoveicolo</th> <th>Targa </th>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "> Targa </td>
+                    <td> {{this.[1]}} </td>
+                </tr>
+                <tr>
+                    <td style="background-color: rgb(169, 194, 226);  "> Data immatricolazione </td>
+                    <td> {{this.[3]}} </td>
+                </tr>
+            </tbody>
+        </table>
+        {{/each}}
+    </div>
+
+    <div style="page-break-after:always; padding-top: 5%;">
+        <h3>GIUDIZIO RECUPERABILITA' DEL CREDITO</h3>
+        <hr style="color: orange; padding-bottom: 3%;"> <br>
+        <p class="note">
+            {{giudizio}}
+        </p>
+    </div> 
+
+</body>
+</html>
